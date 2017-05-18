@@ -52,10 +52,13 @@
       FeatureSet, SimpleMarkerSymbol, SimpleLineSymbol, Color, urlUtils, on
     ) {
 
+      var host = "//localhost:8080",
+          proxyUrl ="/proxy-php/proxy.php";
+      // esriConfig.request.proxyUrl = "http://localhost:8080/proxy-php/proxy.php";
+      esriConfig.request.corsEnabledServers.push(host);
+      esriConfig.request.corsEnabledServers.push("//localhost:9090");
 
-      esriConfig.request.proxyUrl = "http://localhost:8080/proxy-php/proxy.php";
-      esriConfig.request.corsEnabledServers.push("localhost:8080");
-      esriConfig.request.corsEnabledServers.push("localhost:9090");
+
       // var info = new OAuthInfo({
       //   appId: "1V4AE95uoHUo0aJG"
       //   popup: false,
@@ -63,15 +66,17 @@
       //
       // ideManager.registerOAuthInfos([info]);
       //
+
+
       //proxy the route requests to avoid prompt for log in
       urlUtils.addProxyRule({
         urlPrefix: "route.arcgis.com",
-        proxyUrl: "http://localhost:8080/proxy-php/proxy.php"
+        proxyUrl: host + proxyUrl
       });
 
       urlUtils.addProxyRule({
         urlPrefix: "traffic.arcgis.com",
-        proxyUrl: "http://localhost:8080/proxy-php/proxy.php"
+        proxyUrl: host + proxyUrl
       });
 
 
