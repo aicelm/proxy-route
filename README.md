@@ -1,6 +1,6 @@
 ## Instrucciones sobre el _Proxy_:
 
-**Acceso directo al repositorio de ESRI : ["Resoruce-Proxy"]("https://github.com/Esri/resource-proxy")**
+**Acceso directo al repositorio de ESRI : ["Resoruce-Proxy"](https://github.com/Esri/resource-proxy)**
 
  Donde se puede encuentrar:
  * Carpetas instalables según el tipo de servidor
