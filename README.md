@@ -1,4 +1,4 @@
-## Instrucciones sobre el _Proxy_:
+## Instrucciones sobre el Proxy:
 
 **Acceso directo al repositorio de ESRI : ["Resoruce-Proxy"](https://github.com/Esri/resource-proxy)**
 
