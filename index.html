@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>Sample Code - Route with Resource-Proxy</title>
+  <title>Sample Code - Route with Resource-Proxy on Localhots</title>
   <style>
     html,
     body,
@@ -30,8 +30,6 @@
   <script>
     require([
       "esri/config",
-      "esri/identity/IdentityManager",
-      "esri/identity/OAuthInfo",
       "esri/Map",
       "esri/views/MapView",
       "esri/Graphic",
@@ -47,11 +45,11 @@
       "dojo/domReady!"
     ], function(
       esriConfig,
-      idManager, OAuthInfo,
       Map, MapView, Graphic, GraphicsLayer, RouteTask, RouteParameters,
       FeatureSet, SimpleMarkerSymbol, SimpleLineSymbol, Color, urlUtils, on
     ) {
 
+      //It resolves CORS and adding exception port :9090
       esriConfig.request.proxyUrl = "http://localhost:8080/proxy-php/proxy.php";
       esriConfig.request.corsDetection = false
       esriConfig.request.corsEnabledServers.push("//localhost:9090");
